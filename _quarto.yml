@@ -1,0 +1,38 @@
+project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "My Example book"
+  reader-mode: true
+  author: "Bruno Paz"
+  date: "5/1/2025"
+  cover-image: assets/cover.png
+  chapters:
+    - index.qmd
+    - src/intro.qmd
+    - src/summary.qmd
+    - src/references.qmd
+  page-footer:
+    left: |
+      My Example Book was writen by Bruno Paz.
+    right: |
+      This book was built with <a href="https://quarto.org/">Quarto</a>.
+      repo-url: https://github.com/hadley/r4ds/
+
+  repo-url: https://github.com/brpaz/example-book
+  repo-branch: main
+  repo-actions: [edit, issue]
+
+bibliography: src/references.bib
+
+website:
+  navbar:
+    search: true
+
+format:
+  html:
+    theme:
+      - cosmo
+  epub:
+    cover-image: assets/cover.png
