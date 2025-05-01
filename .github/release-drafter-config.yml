@@ -24,7 +24,6 @@ categories:
       - documentation
   - title: 🧩 Dependency Updates
     labels:
-      - deps
       - dependencies
     collapse-after: 5
 change-template: "- $TITLE @$AUTHOR (#$NUMBER)"
