@@ -61,12 +61,13 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: book
+          path: _book
 
       - name: Upload release assets
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            book/*.epub
+            _book/*.epub
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -101,7 +102,6 @@ jobs:
           name: book
           path: _book
 
-      - run: ls -la _book
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
